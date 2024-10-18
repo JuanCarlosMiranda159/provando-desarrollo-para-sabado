@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+#productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    width: 400px;
+    height: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+.producto h3 {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+.decoracion{
+    text-decoration: none;
+}
+.color{
+    background-color: #333;
+ 
+}
+.centro{
+    display: flex;
+    justify-content: center;
+    
+}
+.imagen-equipo{
+    width: 250px; 
+    height: auto;
+    
+}
+.styled-button {
+    background-color: #4CAF50; /* Fondo verde */
+    border: none; /* Sin borde */
+    color: white; /* Texto blanco */
+    padding: 15px 32px; /* Espaciado interno (padding) */
+    text-align: center; /* Texto centrado */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 2px; /* Margen alrededor del botón */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.styled-button:hover {
+    background-color: #45a049; /* Fondo más oscuro al pasar el mouse */
+}
+#carrito {
+    padding: 20px;
+    text-align: center;
+}
+
+#cart-items {
+    margin: 20px 0;
+}
+
+#cart-items p {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}

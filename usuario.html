@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="archivo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <title>Caffecito Usuarios</title>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <h1 class="titulo-caffecito">Caffecito</h1>
+    
+    <div id="mensaje-confirmacion" class="alert alert-success" style="display: none;"></div>
+    
+    <div class="contenedor">
+        <h1>Agregar usuario</h1>
+        <input type="text" id="nombre-usuario" placeholder="Nombre de Usuario" class="form-control"><br>
+        <input type="text" id="nombre" placeholder="Nombre" class="form-control"><br>
+        <input type="text" id="apellido" placeholder="Apellido" class="form-control"><br>
+        <input type="text" id="dni" placeholder="DNI" class="form-control"><br>
+        <input type="email" id="correo" placeholder="Correo electrónico" class="form-control"><br>
+        <input type="tel" id="celular" placeholder="Número de celular" class="form-control"><br>
+        <input type="password" id="contrasena" placeholder="Contraseña" class="form-control"><br>
+        <button class="btn btn-info" id="boton-usuario" onclick="guardarUsuario()">Guardar</button>
+    </div>
+    <script src="usuario.js"></script>
+</body>
+</html>

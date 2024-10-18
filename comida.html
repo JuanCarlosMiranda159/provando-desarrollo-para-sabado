@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="archivo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <title>Caffecito Comidas</title>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <h1 class="titulo-caffecito">Caffecito</h1>
+    <div class="contenedor">
+        <h1>Agregar comidas</h1>
+        <div class="menu-izquierda">
+          <nav>
+              <ul>
+                  <li><a href="http://127.0.0.1:5500/postre.html">postres</a></li>    
+                  <li><a href="http://127.0.0.1:5500/ensalada.html">Ensaladas</a></li>
+                  <li><a href="http://127.0.0.1:5500/comida.html">Comidas</a></li>
+                  <li><a href="http://127.0.0.1:5500/bebida.html">Bebidas</a></li>
+                  <li><a href="http://127.0.0.1:5500/extra.html">Extras</a></li>
+              </ul>
+          </nav>
+      </div>
+        <input type="text" id="comida" placeholder="comida" class="form-control"><br>
+        <input type="text" id="descripcion" placeholder="descripcion" class="form-control"><br>
+        <input type="text" id="tipo" placeholder="tipo" class="form-control"><br>
+        <input type="text" id="sabor" placeholder="sabor" class="form-control"><br>
+        <input type="text" id="valor" placeholder="valor" class="form-control"><br>
+        <button class="btn btn-info" id="boton" onclick="guardar()">Guardar</button>
+        
+        <table class="table my-3">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Comida</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Sabor</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Eliminar</th>
+                    <th scope="col">Editar</th>
+                </tr>
+            </thead>
+            <tbody id="tabla">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Example</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                    <td>Sabor</td>
+                    <td>Value</td>
+                </tr>          
+            </tbody>
+        </table>
+    </div>
+    <script src="comida.js"></script>
+</body>
+</html>

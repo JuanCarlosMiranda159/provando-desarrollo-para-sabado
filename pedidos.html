@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="archivo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <title>Pedidos - Caffecito</title>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <h1 class="titulo-caffecito">Caffecito - Pedidos</h1>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Comida</th>
+                <th>Postre</th>
+                <th>Ensalada</th>
+                <th>Bebida</th>
+                <th>Extra</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-pedidos">
+            <!-- Los pedidos se mostrarán aquí -->
+        </tbody>
+    </table>
+
+    <script src="pedidos.js"></script>
+</body>
+</html>
