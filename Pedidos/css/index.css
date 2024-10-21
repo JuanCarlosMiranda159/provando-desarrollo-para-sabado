@@ -14,7 +14,6 @@ header {
 
 header h1 {
     margin: 0;
-    
 }
 
 nav ul {
@@ -90,23 +89,25 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
-.decoracion{
+
+.decoracion {
     text-decoration: none;
 }
-.color{
+
+.color {
     background-color: #333;
- 
 }
-.centro{
+
+.centro {
     display: flex;
     justify-content: center;
-    
 }
-.imagen-equipo{
-    width: 250px; 
+
+.imagen-equipo {
+    width: 250px;
     height: auto;
-    
 }
+
 .styled-button {
     background-color: #4CAF50; /* Fondo verde */
     border: none; /* Sin borde */
@@ -125,28 +126,194 @@ footer {
 .styled-button:hover {
     background-color: #45a049; /* Fondo más oscuro al pasar el mouse */
 }
+
+/* Estilos para el carrito */
 #carrito {
     padding: 20px;
     text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
 }
 
 #cart-items {
     margin: 20px 0;
+    text-align: left;
 }
 
 #cart-items p {
     margin: 5px 0;
 }
 
-button {
-    background-color: #28a745;
+#total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button.confirmar {
+    background-color: #007bff; /* Fondo azul */
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+button.confirmar:hover {
+    background-color: #0056b3; /* Fondo azul más oscuro al pasar el mouse */
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #35424a;
     color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Navegación */
+nav {
+    background-color: #e8491d;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sección de productos */
+#productos {
+    padding: 1rem;
+}
+
+.producto {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 15px 0;
+    padding: 15px;
+}
+
+/* Botones */
+button {
+    background-color: #35424a;
     border: none;
-    padding: 10px;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px 15px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #e8491d;
 }
+
+/* Pie de página */
+footer {
+    background-color: #35424a;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+#carrito {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 300px;
+}
+
+#lista-carrito {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-carrito li {
+    margin: 5px 0;
+}
+
+/* Estilos generales para la tabla */
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Para que no haya espacios entre las celdas */
+    margin: 20px 0; /* Espaciado alrededor de la tabla */
+    font-size: 1.2em; /* Aumentar el tamaño de la fuente */
+}
+
+/* Estilos para las celdas de la tabla */
+th, td {
+    border: 1px solid #ddd; /* Bordes de las celdas */
+    text-align: left; /* Alineación del texto */
+    padding: 12px; /* Espaciado interno */
+}
+
+/* Estilo para el encabezado de la tabla */
+th {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+}
+
+/* Estilo para las filas de la tabla al pasar el ratón */
+tr:hover {
+    background-color: #f5f5f5; /* Color de fondo al pasar el ratón */
+}
+/* Estilo del contenedor de la sección del carrito */
+#carrito {
+    max-width: 800px; /* Establecer un ancho máximo para el contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 20px; /* Agregar espaciado interno */
+    background-color: #f9f9f9; /* Color de fondo del contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+/* Estilos generales para la tabla */
+table {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Para que no haya espacios entre las celdas */
+    margin: 20px 0; /* Espaciado alrededor de la tabla */
+    font-size: 1.2em; /* Aumentar el tamaño de la fuente */
+}
+
+/* Estilos para las celdas de la tabla */
+th, td {
+    border: 1px solid #ddd; /* Bordes de las celdas */
+    text-align: left; /* Alineación del texto */
+    padding: 12px; /* Espaciado interno */
+}
+
+/* Estilo para el encabezado de la tabla */
+th {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+}
+
+/* Estilo para las filas de la tabla al pasar el ratón */
+tr:hover {
+    background-color: #f5f5f5; /* Color de fondo al pasar el ratón */
+}
+

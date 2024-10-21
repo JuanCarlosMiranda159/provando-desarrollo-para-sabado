@@ -1,4 +1,4 @@
-// Configuración de Firebase
+// Inicializar Firebase
 const firebaseConfig = {
     apiKey: "API_KEY",
     authDomain: "cafeteria-96b83.firebaseapp.com",
@@ -9,121 +9,59 @@ const firebaseConfig = {
     measurementId: "G-CGX7RXHK1F"
 };
 
-// Inicializar Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-// Función para guardar productos
-function guardarProductos() {
-    // Obtener los valores de cada input
-    const comida = document.getElementById('comida').value;
-    const postre = document.getElementById('postre').value;
-    const ensalada = document.getElementById('ensalada').value;
-    const bebida = document.getElementById('bebida').value;
-    const extra = document.getElementById('extra').value;
+function mostrarCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+    const tablaCarrito = document.getElementById('carrito-tabla');
+    tablaCarrito.innerHTML = '';
+    let total = 0;
 
-    // Guardar en la colección 'productos' de Firestore
-    const productos = {
-        comida: comida,
-        postre: postre,
-        ensalada: ensalada,
-        bebida: bebida,
-        extra: extra
+    for (let producto in carrito) {
+        const { cantidad, precio } = carrito[producto];
+        const subtotal = cantidad * precio;
+        total += subtotal;
+        let row = `<tr>
+                     <td>${producto}</td>
+                     <td>${cantidad}</td>
+                     <td>$${precio}</td>
+                     <td>$${subtotal}</td>
+                   </tr>`;
+        tablaCarrito.innerHTML += row;
+    }
+
+    // Mostrar total
+    const totalRow = `<tr>
+                        <td colspan="3">Total</td>
+                        <td>$${total}</td>
+                      </tr>`;
+    tablaCarrito.innerHTML += totalRow;
+}
+
+// Llamar a mostrarCarrito al cargar la página
+document.addEventListener('DOMContentLoaded', mostrarCarrito);
+
+// Función para finalizar el pedido
+function finalizarPedido() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || {};
+    if (Object.keys(carrito).length === 0) {
+        alert("Tu carrito está vacío. Agrega productos antes de finalizar el pedido.");
+        return;
+    }
+
+    const pedido = {
+        productos: carrito,
+        fecha: new Date()
     };
 
-    db.collection('productos').add(productos)
-    .then((docRef) => {
-        console.log("Productos guardados con ID: ", docRef.id);
-        limpiarCampos();
-        mostrarProductos();
-    })
-    .catch((error) => {
-        console.error("Error al guardar los productos: ", error);
-    });
-}
-
-// Función para limpiar los campos del formulario
-function limpiarCampos() {
-    document.getElementById('comida').value = '';
-    document.getElementById('postre').value = '';
-    document.getElementById('ensalada').value = '';
-    document.getElementById('bebida').value = '';
-    document.getElementById('extra').value = '';
-}
-
-// Función para mostrar productos
-function mostrarProductos() {
-    const tablaProductos = document.getElementById('tabla-productos');
-    
-    // Limpiar tabla
-    tablaProductos.innerHTML = '';
-
-    // Leer y mostrar productos de la colección 'productos'
-    db.collection('productos').onSnapshot((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            const data = doc.data();
-            tablaProductos.innerHTML += `
-                <tr>
-                    <th scope="row">${doc.id}</th>
-                    <td>${data.comida}</td>
-                    <td>${data.postre}</td>
-                    <td>${data.ensalada}</td>
-                    <td>${data.bebida}</td>
-                    <td>${data.extra}</td>
-                    <td><button class="btn btn-danger" onclick="eliminarProducto('${doc.id}')">Eliminar</button></td>
-                    <td><button class="btn btn-warning" onclick="editarProducto('${doc.id}', '${data.comida}', '${data.postre}', '${data.ensalada}', '${data.bebida}', '${data.extra}')">Editar</button></td>
-                </tr>
-            `;
+    db.collection("pedidos").add(pedido)
+        .then(() => {
+            alert("Pedido realizado con éxito.");
+            localStorage.removeItem('carrito'); // Elimina el carrito del localStorage
+            mostrarCarrito(); // Actualiza la vista del carrito
+        })
+        .catch((error) => {
+            console.error("Error al realizar el pedido: ", error);
         });
-    });
 }
-
-// Función para eliminar un producto
-function eliminarProducto(id) {
-    db.collection('productos').doc(id).delete().then(() => {
-        console.log("Producto eliminado");
-        mostrarProductos();
-    }).catch((error) => {
-        console.error("Error al eliminar el producto: ", error);
-    });
-}
-
-// Función para editar un producto
-function editarProducto(id, comida, postre, ensalada, bebida, extra) {
-    document.getElementById('comida').value = comida;
-    document.getElementById('postre').value = postre;
-    document.getElementById('ensalada').value = ensalada;
-    document.getElementById('bebida').value = bebida;
-    document.getElementById('extra').value = extra;
-
-    const boton = document.getElementById('guardar-producto');
-    boton.innerHTML = 'Actualizar';
-    boton.onclick = function() {
-        db.collection('productos').doc(id).update({
-            comida: document.getElementById('comida').value,
-            postre: document.getElementById('postre').value,
-            ensalada: document.getElementById('ensalada').value,
-            bebida: document.getElementById('bebida').value,
-            extra: document.getElementById('extra').value
-        }).then(() => {
-            console.log("Producto actualizado");
-            boton.innerHTML = 'Guardar Productos';
-            limpiarCampos();
-            mostrarProductos();
-        }).catch((error) => {
-            console.error("Error al actualizar el producto: ", error);
-        });
-    };
-}
-
-// Mostrar productos al cargar la página
-document.addEventListener('DOMContentLoaded', mostrarProductos);
-
-// Función para mostrar el nombre del usuario
-function mostrarUsuario() {
-    const usuario = localStorage.getItem('usuario') || 'Usuario Anónimo';
-    document.getElementById('nombre-usuario-span').innerText = usuario;
-}
-
-document.addEventListener('DOMContentLoaded', mostrarUsuario);
-

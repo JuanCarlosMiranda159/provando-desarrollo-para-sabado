@@ -1,36 +1,36 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="archivo.css">
+    <link rel="stylesheet" href="pedido.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" crossorigin="anonymous">
     <title>Gestión de Productos - Caffecito</title>
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
 </head>
 <body>
-    <h1 class="titulo-caffecito">Caffecito - Gestión de Productos</h1>
-    
-    <!-- Nombre de usuario -->
-    <div id="usuario-contenedor">
-        <h2 id="nombre-usuario">Bienvenido, <span id="nombre-usuario-span"></span></h2>
-    </div>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Caffecito - Gestión de Productos</h1>
 
-    <div class="contenedor">
-        <h2>Ingrese los datos del producto</h2>
-
-        <!-- Inputs para cada categoría -->
-        <input type="text" id="comida" placeholder="Comida (ej. Lenteja)" class="form-control my-2">
-        <input type="text" id="postre" placeholder="Postre (ej. Helado)" class="form-control my-2">
-        <input type="text" id="ensalada" placeholder="Ensalada (ej. César)" class="form-control my-2">
-        <input type="text" id="bebida" placeholder="Bebida (ej. Jugo)" class="form-control my-2">
-        <input type="text" id="extra" placeholder="Extra (ej. Pan)" class="form-control my-2">
-        
-        <button class="btn btn-primary" id="guardar-producto" onclick="guardarProductos()">Guardar Productos</button>
-
-     
-       
+        <div id="carrito" class="shadow p-4 rounded bg-light">
+            <h2 class="text-primary">Carrito de Compras</h2>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Precio Unitario</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-tabla"></tbody>
+            </table>
+            <div class="text-right">
+                <button class="btn btn-success" onclick="finalizarPedido()">Finalizar Pedido</button>
+            </div>
+        </div>
     </div>
 
     <script src="pedido.js"></script>

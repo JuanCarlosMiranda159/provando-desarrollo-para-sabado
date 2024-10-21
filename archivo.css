@@ -1,19 +1,96 @@
-body {
-    background-image: url('ruta/a/tu/fondo.jpg'); /* Cambia la ruta a tu imagen */
-    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-    background-attachment: fixed; /* Mantiene la imagen fija al desplazarse */
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
+
+/* Estilo general */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+body {
+    background-image: url('/img/comida1.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column; /* Alinear verticalmente */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del login */
+.login-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+    margin-bottom: 20px; /* Añadido margen inferior */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botones */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-ingresar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-crear-cuenta {
+    background-color: #2196F3;
+    color: white;
+}
+
+.gmail-button {
+    background-color: #D44638;
+    color: white;
+    margin-top: 15px;
+}
+
+.facebook-button {
+    background-color: #1877F2;
+    color: white;
+    margin-top: 15px;
+}
+
+/* Estilo del contenedor */
 .contenedor {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente para el contenedor */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
     padding: 20px; /* Espaciado interno */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
 }
-
 
 .titulo-caffecito {
     font-family: 'Poppins', sans-serif;
@@ -27,105 +104,35 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     animation: glow 3s ease-in-out infinite alternate, scaleUp 3s ease-in-out infinite alternate;
-  }
+}
 
-  /* Animación de brillo */
-  @keyframes glow {
+/* Animaciones */
+@keyframes glow {
     0% {
-      text-shadow: 0 0 10px rgba(255, 112, 67, 0.7), 0 0 20px rgba(255, 112, 67, 0.5),
-                  0 0 30px rgba(255, 112, 67, 0.3), 0 0 40px rgba(255, 112, 67, 0.2);
+        text-shadow: 0 0 10px rgba(255, 112, 67, 0.7), 0 0 20px rgba(255, 112, 67, 0.5),
+                    0 0 30px rgba(255, 112, 67, 0.3), 0 0 40px rgba(255, 112, 67, 0.2);
     }
     100% {
-      text-shadow: 0 0 20px rgba(255, 112, 67, 1), 0 0 40px rgba(255, 112, 67, 0.8),
-                  0 0 60px rgba(255, 112, 67, 0.6), 0 0 80px rgba(255, 112, 67, 0.4);
+        text-shadow: 0 0 20px rgba(255, 112, 67, 1), 0 0 40px rgba(255, 112, 67, 0.8),
+                    0 0 60px rgba(255, 112, 67, 0.6), 0 0 80px rgba(255, 112, 67, 0.4);
     }
-  }
+}
 
-  /* Animación para aumentar el tamaño */
-  @keyframes scaleUp {
+@keyframes scaleUp {
     0% {
-      transform: scale(1); /* Tamaño original */
+        transform: scale(1); /* Tamaño original */
     }
     100% {
-      transform: scale(1.2); /* Aumento del tamaño al 120% */
+        transform: scale(1.2); /* Aumento del tamaño al 120% */
     }
-  }
-
-.contenedor input.form-control {
-    font-size: 14px; /
-    padding: 5px 10px; 
-    border-radius: 5px; 
-    width: 70%; 
-    margin: 0 auto; 
-}
-nav {
-    background-color: #f8f9fa; 
-    padding: 10px; 
 }
 
-nav ul {
-    list-style-type: none; 
-    padding: 0; 
-}
-
-nav ul li {
-    display: inline; 
-    margin-right: 20px; 
-}
-
-nav ul li a {
-    text-decoration: none; 
-    color: #007bff; 
-    font-weight: bold; 
-    padding: 5px 10px; 
-    border-radius: 5px; 
-    transition: background-color 0.1s; 
-}
-
-nav ul li a:hover {
-    background-color: #007bff; 
-    color: white; 
-}
-h1 {
-    font-size: 2.5em; 
-    color: #333; 
-    text-align: center; 
-    margin: 20px 0; 
-    text-transform: uppercase; 
-    font-family: 'Arial', sans-serif; 
-    padding: 10px; 
-    background-color: #f0f0f0; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-}
-.table {
-    width: 100%; 
-    margin: 20px 0; 
-    border-collapse: collapse; 
-}
-
-.table th, .table td {
-    padding: 12px; 
-    text-align: left; 
-    border: 1px solid #ddd; 
-}
-
-.table th {
-    color: rgb(202, 19, 19); 
-    text-transform: uppercase; 
-}
-
-.table tr:hover {
-    background-color: #f1f1f1; 
-}
-.menu-izquierda {
-    text-align: right; 
-}
-
+/* Estilo de la tabla */
 .table {
     width: 50%; 
     margin: 20px auto; 
     border: 1px solid #ddd;
+    border-collapse: collapse; 
 }
 
 .table th, .table td {
@@ -135,33 +142,40 @@ h1 {
 
 .table th {
     font-size: 16px; 
+    color: rgb(202, 19, 19); 
+    text-transform: uppercase; 
 }
 
-.table td {
-    font-size: 14px; 
-}
-button.btn {
-    font-size: 20px; 
-    padding: 15px 30px; 
-    border-radius: 8px; 
-    width: 200px; 
-    height: 60px; 
-    background-color: #007bff; 
-    color: white; 
-    border: none; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.2s ease, background-color 0.2s ease; 
+.table tr:hover {
+    background-color: #f1f1f1; 
 }
 
-button.btn:hover 
-    background-color: #0056b3; 
-    transform: scale(1.05); 
-.boton{
-    background-color: #0056b3; 
-    transform: scale(1.05); 
+/* Mapa */
+.contenedor-mapa {
+    width: 600px;
+    max-width: 90%; /* Responsivo */
+    margin: 0 auto; /* Centrado */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra */
 }
-.mapa{
-    width:auto;
-    height: auto;
-    background-color:goldenrod;
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+.metodos-pago {
+    text-align: center; /* Centrar el contenido */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+.metodo-pago {
+    width: 50px; /* Ancho de las imágenes */
+    margin: 0 10px; /* Margen horizontal entre imágenes */
+    transition: transform 0.2s; /* Transición suave para el hover */
+}
+
+.metodo-pago:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el ratón */
 }

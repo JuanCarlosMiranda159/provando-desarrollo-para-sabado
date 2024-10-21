@@ -1,0 +1,47 @@
+body {
+    background-color: #f8f9fa; /* Color de fondo */
+}
+
+.titulo-caffecito {
+    color: #5a6268; /* Color del título */
+}
+
+#carrito {
+    border: 1px solid #ddd; /* Borde del carrito */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.table th {
+    background-color: #343a40; /* Color de fondo para el encabezado */
+    color: white; /* Color del texto */
+}
+
+.table td {
+    vertical-align: middle; /* Alinear verticalmente el contenido de las celdas */
+}
+
+.btn-editar {
+    background-color: #ffc107; /* Amarillo */
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-borrar {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-editar:hover, .btn-borrar:hover {
+    opacity: 0.8; /* Efecto de hover */
+}
+
+.shadow {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}

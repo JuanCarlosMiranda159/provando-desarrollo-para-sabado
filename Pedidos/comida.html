@@ -5,69 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <title>COMIDA</title>
-    
 </head>
 <body>
     <header class="costado">
         <h1>Caffecito</h1>
         <nav>
             <ul class="decoracion">
-                <li class=""><a href="../menu.html" class="decoracion"> Ir a Inicio</a></li>
-                <li class=""><a href="#productos">Productos</a></li>
-                <li class=""><a href="#contacto">Contacto</a></li>
+                <li><a href="../menu.html" class="decoracion">Ir a Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="inicio">
-        <h2></h2>
-        <p></p>
-    </section>
     <div class="centro">
         <h2>Nuestros Productos</h2>
-        </div>
+    </div>
+
     <section id="productos">
-       
         <div class="producto">
-            <img src="/img/lentejita.jpg" alt="Teléfono"  style="width: 250px; height: auto;">
+            <img src="/img/lentejita.jpg" alt="Lenteja" style="width: 250px; height: auto;">
             <h3>Lenteja</h3>
-           
-            <button>Pedido</button>
+            <button onclick="agregarProducto('Lenteja')">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="/img/estofado.webp" alt="Laptop"  style="width: 250px; height: auto;">
+            <img src="/img/estofado.webp" alt="Estofado" style="width: 250px; height: auto;">
             <h3>Estofado</h3>
-            
-            <button>Pedido</button>
+            <button onclick="agregarProducto('Estofado')">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="/img/lomo saltado.jpg" alt="Auriculares" style="width: 250px; height: auto;">
-            <h3>Lomo saltado</h3>
-            <p></p>
-            <button>Pedido</button>
+            <img src="/img/lomo saltado.jpg" alt="Lomo Saltado" style="width: 250px; height: auto;">
+            <h3>Lomo Saltado</h3>
+            <button onclick="agregarProducto('Lomo Saltado')">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="/img/aji de gallina.jpg" alt="Ají de Gallina" style="width: 250px; height: auto;">
+            <h3>Ají de Gallina</h3>     
+            <button onclick="agregarProducto('Ají de Gallina')">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="/img/causa rellena.jpg" alt="Causa Rellena" style="width: 250px; height: auto;">
+            <h3>Causa Rellena</h3>
+            <button onclick="agregarProducto('Causa Rellena')">Agregar al carrito</button>
         </div>
     </section>
-    <section id="productos">
-       
-        <div class="producto">
-            <img src="/img/aji de gallina.jpg" alt="Teléfono"  style="width: 250px; height: auto;">
-            <h3>Aji de gallina</h3>
-           
-            <button>Pedido</button>
-        </div>
-        <div class="producto">
-            <img src="/img/causa rellena.jpg" alt="Laptop"  style="width: 250px; height: auto;">
-            <h3>Causa rellena</h3>
-            
-            <button>Pedido</button>
-        </div>
-        <div class="producto">
-            <img src="/img/contactanos.jpg" alt="Auriculares"  style="width: 250px; height: auto; margin-top:50px ;" >
-          </div>
+
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="carrito-tabla"></tbody>
+        </table>
     </section>
 
     <footer class="color">
-        <a href="/pedido.html" style="color: yellow;">hacer pedido</a>
+        <a href="/pedido.html" style="color: yellow;">Hacer pedido</a>
+        <button onclick="finalizarPedido()">Finalizar Pedido</button>
     </footer>
+    <script src="comida.js"></script>
 </body>
 </html>

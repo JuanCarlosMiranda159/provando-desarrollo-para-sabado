@@ -5,68 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <title>EXTRAS</title>
-    
 </head>
 <body>
     <header class="costado">
         <h1>Caffecito</h1>
         <nav>
             <ul class="decoracion">
-                <li class=""><a href="../menu.html" class="decoracion"> Ir a Inicio</a></li>
-                <li class=""><a href="#productos">Productos</a></li>
-                <li class=""><a href="#contacto">Contacto</a></li>
+                <li><a href="../menu.html" class="decoracion">Ir a Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="inicio">
-        
-    </section>
     <div class="centro">
         <h2>Nuestros Productos</h2>
-        </div>
+    </div>
+
     <section id="productos">
-       
         <div class="producto">
-            <img src="/img/alitas a barbiquiu.jpg" alt="Teléfono"  style="width: 250px; height: auto;">
-            <h3>Alitas a la barbiquiu</h3>
-           
-            <button>BUSCAR</button>
+            <img src="/img/alitas a barbiquiu.jpg" alt="Alitas a la barbiquiu" style="width: 250px; height: auto;">
+            <h3>Alitas a la Barbiquiu</h3>
+            <button onclick="agregarAlCarrito('Alitas a la Barbiquiu')">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="/img/triple extra.jpg" alt="Laptop"  style="width: 250px; height: auto;">
+            <img src="/img/triple extra.jpg" alt="Triple" style="width: 250px; height: auto;">
             <h3>Triple</h3>
-            
-            <button>BUSCAR</button>
+            <button onclick="agregarAlCarrito('Triple')">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="/img/nachos.avif" alt="Auriculares" style="width: 250px; height: auto;">
+            <img src="/img/nachos.avif" alt="Nachos" style="width: 250px; height: auto;">
             <h3>Nachos</h3>
-            <p></p>
-            <button>BUSCAR</button>
+            <button onclick="agregarAlCarrito('Nachos')">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="/img/perro caliente.jpg" alt="Perro Caliente" style="width: 250px; height: auto;">
+            <h3>Perro Caliente</h3>
+            <button onclick="agregarAlCarrito('Perro Caliente')">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="/img/tequeños.webp" alt="Tequeños" style="width: 250px; height: auto;">
+            <h3>Tequeños</h3>
+            <button onclick="agregarAlCarrito('Tequeños')">Agregar al carrito</button>
         </div>
     </section>
-    <section id="productos">
-       
-        <div class="producto">
-            <img src="/img/perro caliente.jpg" alt="Teléfono"  style="width: 250px; height: auto;">
-            <h3>Perro Caliente</h3>
-           
-            <button>BUSCAR</button>
-        </div>
-        <div class="producto">
-            <img src="/img/tequeños.webp" alt="Laptop"  style="width: 250px; height: auto;">
-            <h3>Tequeños/h3>
-            
-            <button>BUSCAR</button>
-        </div>
-        <div class="producto">
-            <img src="/img/contactanos.jpg" alt="Auriculares"  style="width: 250px; height: auto; margin-top:50px ;" >
-          </div>
+
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="carrito-tabla"></tbody>
+        </table>
     </section>
 
     <footer class="color">
-        <a href="/pedido.html" style="color: yellow;">hacer pedido</a>
+        <a href="/pedido.html" style="color: yellow;">Hacer pedido</a>
+        <button onclick="finalizarPedido()">Finalizar Pedido</button>
     </footer>
+
+    <script src="extras.js"></script>
 </body>
 </html>

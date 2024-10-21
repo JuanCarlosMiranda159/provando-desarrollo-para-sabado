@@ -1,4 +1,3 @@
-/ Configuración de Firebase (la misma que ya tienes en el otro archivo)
 const firebaseConfig = {
     apiKey: "API_KEY",
     authDomain: "cafeteria-96b83.firebaseapp.com",

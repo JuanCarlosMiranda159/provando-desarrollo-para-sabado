@@ -4,69 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
-    <title>Ensalda</title>
-    
+    <title>Ensaladas</title>
 </head>
 <body>
     <header class="costado">
         <h1>Caffecito</h1>
         <nav>
             <ul class="decoracion">
-                <li class=""><a href="../menu.html" class="decoracion"> Ir a Inicio</a></li>
-                <li class=""><a href="#productos">Productos</a></li>
-                <li class=""><a href="#contacto">Contacto</a></li>
+                <li><a href="../menu.html" class="decoracion">Ir a Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="inicio">
-       
-    </section>
     <div class="centro">
-        <h2>Nuestros Productos</h2>
-        </div>
+        <h2>Nuestras Ensaladas</h2>
+    </div>
+
     <section id="productos">
-       
         <div class="producto">
-            <img src="/img/Ensalda mixta.jpg" alt="Teléfono"  style="width: 250px; height: auto;">
+            <img src="/img/Ensalda mixta.jpg" alt="Ensalada Mixta" style="width: 250px; height: auto;">
             <h3>Ensalada Mixta</h3>
-           
-            <button>Pedido</button>
+            <p>Precio: $8</p>
+            <button onclick="agregarProductoEnsalada('Ensalada Mixta')">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="/img/Ensalada de cholo.webp" alt="Laptop"  style="width: 250px; height: auto;">
+            <img src="/img/Ensalada de cholo.webp" alt="Ensalada de Choclo" style="width: 250px; height: auto;">
             <h3>Ensalada de Choclo</h3>
-            
-            <button>Pedido</button>
+            <p>Precio: $10</p>
+            <button onclick="agregarProductoEnsalada('Ensalada de Choclo')">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="/img/ensalda de verduras.jpg" alt="Auriculares" style="width: 250px; height: auto;">
+            <img src="/img/ensalda de verduras.jpg" alt="Ensalada de Verduras" style="width: 250px; height: auto;">
             <h3>Ensalada de Verduras</h3>
-            <p></p>
-            <button>Pedido</button>
+            <p>Precio: $12</p>
+            <button onclick="agregarProductoEnsalada('Ensalada de Verduras')">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="/img/ensalda de rabanos.webp" alt="Ensalada de Rabanos" style="width: 250px; height: auto;">
+            <h3>Ensalada de Rabanos</h3>
+            <p>Precio: $9</p>
+            <button onclick="agregarProductoEnsalada('Ensalada de Rabanos')">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="/img/ensalda de palta.avif" alt="Ensalada de Palta" style="width: 250px; height: auto;">
+            <h3>Ensalada de Palta</h3>
+            <p>Precio: $14</p>
+            <button onclick="agregarProductoEnsalada('Ensalada de Palta')">Agregar al carrito</button>
         </div>
     </section>
-    <section id="productos">
-       
-        <div class="producto">
-            <img src="/img/ensalda de rabanos.webp" alt="Teléfono"  style="width: 250px; height: auto;">
-            <h3>Ensalada de Rabanos</h3>
-           
-            <button>Pedido</button>
-        </div>
-        <div class="producto">
-            <img src="/img/ensalda de palta.avif" alt="Laptop"  style="width: 250px; height: auto;">
-            <h3>Ensalada de Palta</h3>
-            
-            <button>Pedido</button>
-        </div>
-        <div class="producto">
-            <img src="/img/contactanos.jpg" alt="Auriculares"  style="width: 250px; height: auto; margin-top:50px ;" >
-          </div>
+
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="carrito-ensaladas-tabla"></tbody>
+        </table>
     </section>
 
     <footer class="color">
-             <a href="/pedido.html" style="color: yellow;">hacer pedido</a>
+        <a href="/pedido.html" style="color: yellow;">Hacer pedido</a>
+        <button onclick="finalizarPedidoEnsaladas()">Finalizar Pedido</button>
     </footer>
+    
+    <script src="ensaladas.js"></script>
 </body>
 </html>

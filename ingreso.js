@@ -33,5 +33,5 @@ function crearUsuario() {
     window.open("usuario.html");
 }
 function redirigir() {
-    window.location.href = "menu.html"; // Cambia por la URL a la que quieras redirigir
+    window.location.href = "menu.html"; 
 }

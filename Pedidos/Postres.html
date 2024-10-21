@@ -5,68 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <title>Postres</title>
-    
 </head>
 <body>
     <header class="costado">
         <h1>Caffecito</h1>
         <nav>
             <ul class="decoracion">
-                <li class=""><a href="../menu.html" class="decoracion"> Ir a Inicio</a></li>
-                <li class=""><a href="#productos">Productos</a></li>
-                <li class=""><a href="#contacto">Contacto</a></li>
+                <li><a href="../menu.html" class="decoracion">Ir a Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="inicio">
-      
-    </section>
     <div class="centro">
         <h2>Nuestros Productos</h2>
-        </div>
+    </div>
+
     <section id="productos">
-       
         <div class="producto">
-            <img src="/img/helado de chocolate.jpg" alt="Teléfono"  style="width: 250px; height: auto;">
+            <img src="/img/helado de chocolate.jpg" alt="Helado de Chocolate" style="width: 250px; height: auto;">
             <h3>Helado de Chocolate</h3>
-           
-            <button>Pedido</button>
+            <p>Precio: $10</p> <!-- Precio agregado -->
+            <button onclick="agregarAlCarrito('Helado de Chocolate')">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="/img/queso helado.jpg" alt="Laptop"  style="width: 250px; height: auto;">
+            <img src="/img/queso helado.jpg" alt="Queso Helado" style="width: 250px; height: auto;">
             <h3>Queso Helado</h3>
-            
-            <button>Pedido</button>
+            <p>Precio: $8</p> <!-- Precio agregado -->
+            <button onclick="agregarAlCarrito('Queso Helado')">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="/img/flan.JPG" alt="Auriculares" style="width: 250px; height: auto;">
+            <img src="/img/flan.JPG" alt="Flan" style="width: 250px; height: auto;">
             <h3>Flan</h3>
-            <p></p>
-            <button>Pedido</button>
+            <p>Precio: $6</p> <!-- Precio agregado -->
+            <button onclick="agregarAlCarrito('Flan')">Agregar al carrito</button>
         </div>
     </section>
+
     <section id="productos">
-       
         <div class="producto">
-            <img src="/img/brauni de chocolate.jpg" alt="Teléfono"  style="width: 250px; height: auto;">
+            <img src="/img/brauni de chocolate.jpg" alt="Brownie de Chocolate" style="width: 250px; height: auto;">
             <h3>Brownie de Chocolate</h3>
-           
-            <button>Pedido</button>
+            <p>Precio: $9</p> <!-- Precio agregado -->
+            <button onclick="agregarAlCarrito('Brownie de Chocolate')">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="/img/banana split.jpg" alt="Laptop"  style="width: 250px; height: auto;">
+            <img src="/img/banana split.jpg" alt="Banana Split" style="width: 250px; height: auto;">
             <h3>Banana Split</h3>
-            
-            <button>Pedido</button>
+            <p>Precio: $7</p> <!-- Precio agregado -->
+            <button onclick="agregarAlCarrito('Banana Split')">Agregar al carrito</button>
         </div>
         <div class="producto">
-            <img src="/img/contactanos.jpg" alt="Auriculares"  style="width: 250px; height: auto; margin-top:50px ;" >
-          </div>
+            <img src="/img/contactanos.jpg" alt="Contáctanos" style="width: 250px; height: auto; margin-top:50px;">
+        </div>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="carrito-tabla"></tbody>
+        </table>
     </section>
 
     <footer class="color">
-        <a href="/pedido.html" style="color: yellow;">hacer pedido</a>
+        <a href="/pedido.html" style="color: yellow;">Hacer pedido</a>
+        <button onclick="finalizarPedido()">Finalizar Pedido</button>
     </footer>
+
+    <script src="postres.js"></script>
 </body>
 </html>

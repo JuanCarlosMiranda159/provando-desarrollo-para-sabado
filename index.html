@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingreso Cafetería Virtual</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="archivo.css">
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
     <script src="ingreso.js" defer></script>
@@ -18,16 +19,27 @@
         <label for="contraseña">Contraseña</label>
         <input type="password" id="contraseña" name="contraseña" required>
 
-        <button class="boton" onclick="redirigir()">Ingresar</button>
-        <button type="button" class="btn-crear-cuenta" onclick="crearUsuario()">Crear Cuenta</button>
+        <button class="boton btn-ingresar" onclick="redirigir()">Ingresar</button>
+        <button type="button" class="boton btn-crear-cuenta" onclick="crearUsuario()">Crear Cuenta</button>
+
+        <button class="boton gmail-button" onclick="window.location.href='https://mail.google.com/'">Ingresar con Gmail</button>
+        <button class="boton facebook-button" onclick="window.location.href='https://www.facebook.com/'">Ingresar con Facebook</button>
     </div>
-    <div class="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d239.22251778044904!2d-71.53578111592607!3d-16.396346993431155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a508e42a63b%3A0x9ecaa5c3fe035d8a!2sMontreal!5e0!3m2!1ses!2spe!4v1729333504161!5m2!1ses!2spe"
-         width="600"
-          height="450" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="metodos-pago">
+        <h3>Métodos de Pago</h3>
+        <img src="/Pedidos/img/yape.png" alt="Visa" class="metodo-pago" title="Visa">
+        <img src="/Pedidos/img/visa-mastercard.jpg" alt="MasterCard" class="metodo-pago" title="MasterCard">
+        <img src="img/paypal.png" alt="PayPal" class="metodo-pago" title="PayPal">
+        <img src="/Pedidos/img/v" alt="">
+    </div>
+
+    <div class="contenedor-mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d239.22251778044904!2d-71.53578111592607!3d-16.396346993431155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a508e42a63b%3A0x9ecaa5c3fe035d8a!2sMontreal!5e0!3m2!1ses!2spe!4v1729333504161!5m2!1ses!2spe" 
+            width="600" height="450" 
+            style="border:0;" allowfullscreen="" 
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 </body>
 </html>
